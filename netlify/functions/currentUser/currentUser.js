@@ -42,7 +42,6 @@ const handler = async (event, context) => {
           notifyCount: 12,
           unreadCount: 11,
           country: 'China',
-          access: getAccess(),
           geographic: {
             province: {
               label: '浙江省',

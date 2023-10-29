@@ -80,7 +80,7 @@ export default {
         notifyCount: 12,
         unreadCount: 11,
         country: 'China',
-        access: getAccess(),
+        // access: getAccess(),
         geographic: {
           province: {
             label: '浙江省',

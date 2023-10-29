@@ -1,19 +1,5 @@
 // netlify/functions/currentUser.js
-exports.handler = async (event, context) => {
-  if (!getAccess()) {
-    return {
-      statusCode: 401,
-      body: JSON.stringify({
-        data: {
-          isLogin: false,
-        },
-        errorCode: '401',
-        errorMessage: '请先登录！',
-        success: true,
-      }),
-    };
-  }
-
+const handler = async (event, context) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -72,3 +58,5 @@ exports.handler = async (event, context) => {
     }),
   };
 };
+
+module.exports = {handler};

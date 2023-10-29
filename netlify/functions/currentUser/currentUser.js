@@ -6,7 +6,7 @@ const handler = async (event, context) => {
       body: JSON.stringify({
         success: true,
         data: {
-          name: 'Serati Ma',
+          name: 'Barmakov Timur',
           avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
           userid: '00000001',
           email: 'antdesign@alipay.com',

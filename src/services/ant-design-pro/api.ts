@@ -6,7 +6,7 @@ import { request } from '@umijs/max';
 export async function currentUser(options?: { [key: string]: any }) {
   return request<{
     data: API.CurrentUser;
-  }>('/api/currentUser', {
+  }>('/.netlify/functions/currentUser', {
     method: 'GET',
     ...(options || {}),
   });
@@ -22,7 +22,7 @@ export async function outLogin(options?: { [key: string]: any }) {
 
 /** 登录接口 POST /api/login/account */
 export async function login(body: API.LoginParams, options?: { [key: string]: any }) {
-  return request<API.LoginResult>('/.netlify/functions/login', {
+  return request<API.LoginResult>('/.netlify/functions/currentUser', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

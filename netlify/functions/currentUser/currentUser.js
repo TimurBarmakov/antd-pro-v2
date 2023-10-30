@@ -2,6 +2,9 @@ exports.handler = async (event, context) => {
   try {
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         success: true,
         data: {

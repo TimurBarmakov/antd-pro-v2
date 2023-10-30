@@ -1,10 +1,6 @@
-exports.handler = async (event, context) => {
-  try {
+const handler = async (event, context) => {
     return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify({
         success: true,
         data: {
@@ -60,10 +56,6 @@ exports.handler = async (event, context) => {
         },
       }),
     };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ success: false, error: error.message }),
-    };
-  }
 };
+
+module.exports = { handler }

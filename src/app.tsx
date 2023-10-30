@@ -47,6 +47,22 @@ export async function getInitialState(): Promise<{
   };
 }
 
+fetch('/.netlify/functions/currentUser')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Обработка данных, которые вернула функция
+    console.log(data);
+  })
+  .catch(error => {
+    // Обработка ошибок
+    console.error('There was a problem with the network request:', error);
+  });
+
 // ProLayout 支持的api https://procomponents.ant.design/components/layout
 export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) => {
   return {

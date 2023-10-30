@@ -11,22 +11,6 @@ import React from 'react';
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
 
-fetch('/.netlify/functions/currentUser')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    // Обработка данных, которые вернула функция
-    console.log(data);
-  })
-  .catch(error => {
-    // Обработка ошибок
-    console.error('There was a problem with the network request:', error);
-  });
-
 /**
  * @see  https://umijs.org/zh-CN/plugins/plugin-initial-state
  * */

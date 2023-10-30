@@ -14,7 +14,7 @@ declare namespace API {
     notifyCount?: number;
     unreadCount?: number;
     country?: string;
-    // access?: string;
+    access?: string;
     geographic?: {
       province?: { label?: string; key?: string };
       city?: { label?: string; key?: string };

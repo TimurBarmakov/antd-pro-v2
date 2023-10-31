@@ -1,5 +1,6 @@
 exports.handler = async (event, context) => {
   try {
+    const tableListDataSource: API.RuleListItem[] = [];
     const { queryStringParameters } = event;
     const { current = 1, pageSize = 10, sorter, filter, name } = queryStringParameters;
 

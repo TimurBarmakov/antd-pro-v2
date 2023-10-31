@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/welcome:splat"
+  to = "/index.html"
   status = 200

@@ -171,6 +171,6 @@ function postRule(req: Request, res: Response, u: string, b: Request) {
 }
 
 export default {
-  'GET /api/rule': getRule,
+  'GET /.netlify/functions/rule': getRule,
   'POST /api/rule': postRule,
 };

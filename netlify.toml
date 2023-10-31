@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "https://voluble-strudel-97d018.netlify.app/welcome"
+  to = "/:splat"
   status = 200

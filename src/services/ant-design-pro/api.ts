@@ -62,7 +62,7 @@ export async function rule(
 
 /** 更新规则 PUT /api/rule */
 export async function updateRule(options?: { [key: string]: any }) {
-  return request<API.RuleListItem>('/api/rule', {
+  return request<API.RuleListItem>('/.netlify/functions/rule', {
     method: 'POST',
     data:{
       method: 'update',
@@ -73,7 +73,7 @@ export async function updateRule(options?: { [key: string]: any }) {
 
 /** 新建规则 POST /api/rule */
 export async function addRule(options?: { [key: string]: any }) {
-  return request<API.RuleListItem>('/api/rule', {
+  return request<API.RuleListItem>('/.netlify/functions/rule', {
     method: 'POST',
     data:{
       method: 'post',
@@ -84,7 +84,7 @@ export async function addRule(options?: { [key: string]: any }) {
 
 /** 删除规则 DELETE /api/rule */
 export async function removeRule(options?: { [key: string]: any }) {
-  return request<Record<string, any>>('/api/rule', {
+  return request<Record<string, any>>('/.netlify/functions/rule', {
     method: 'POST',
     data:{
       method: 'delete',
